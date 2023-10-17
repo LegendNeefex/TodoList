@@ -1,13 +1,124 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #202142;
+  color: #fff;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* body */
+
+.Card{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.thisForm{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.thisForm input{
+    width:700px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.thisForm button, .Card button{
+    border: none;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: blue;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0 3px;
+}
+
+.count h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.count h2{
+    text-align: center;
+    color: red;
+    font-size: 50px;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+}
+
+
+@media screen and (max-width:500px) {
+    .thisForm input{
+        width:400px;
+    }
+
+    .Card{
+        justify-content: space-between;
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .card button{
+        margin: 0 10px;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:768px){
+    .thisForm input{
+        width:500px;
+    }
+
+    .Card{
+        justify-content: space-between;
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .card button{
+        margin: 0 10px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+
+    .Card{
+        justify-content: space-between;
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .card button{
+        margin: 0 10px;
+    }
 }
