@@ -1,5 +1,9 @@
+import { useContext } from "react"
+import TodoContext from "../context/TodoContext"
 
-function TodoCount({TodoCount}) {
+function TodoCount() {
+  const {data:TodoCount} = useContext(TodoContext)
+
   return (
     <div className="count">
       <h2>Todo List</h2>

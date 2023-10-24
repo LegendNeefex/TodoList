@@ -1,31 +1,16 @@
-import { useState } from "react"
+import { useContext } from "react"
+import TodoContext from "../context/TodoContext"
 
-
-function TodoForm({Move}) {
-    const [text,setText] = useState("")
-
-    const submitHandler = (e)=>{
-        e.preventDefault();
-
-        const popUp = {
-            text: text,
-        }
-
-        Move(popUp);
-        setText("")
-    }
-
-    const textHandler = (e)=>{
-        console.log(e.target.value);
-        setText(e.target.value);
-    }
-
+function TodoForm() {
+    const {submitHandler,textHandler,text,isTyping} = useContext(TodoContext)
+    
     return (
-    <form onSubmit={submitHandler} className="thisForm">
-        <input onChange={textHandler} type="text" value={text}/>
+        <form onSubmit={submitHandler} className="thisForm">
+        <input onChange={textHandler} type="text" value={text} placeholder="Enter your task here"/>
         <button type="submit">Send</button>
+        {isTyping ? <p className="typing">Typing...</p> : null}
     </form>
   )
 }
 
-export default TodoForm
+export default TodoForm;

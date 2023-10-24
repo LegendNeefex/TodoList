@@ -20,105 +20,164 @@ ul {
 
 /* body */
 
-.Card{
-    display: flex;
-    justify-content: space-around;
-    margin: 20px auto;
-    width: 80%;
-    background-color: #fff;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 700;
-}
-
 .thisForm{
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
+  margin: 0 300px;
+  width: 60%;
+  /* display: flex; */
+  position: relative;
 }
 
 .thisForm input{
-    width:700px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    outline: none;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    border-radius: 10px;
-    border: none;
+  width: 600px;
+  margin-right: 30px;
+  border-radius: 10px;
+  padding: 10px 0 10px 5px;
+  border: none;
+
 }
 
-.thisForm button, .Card button{
+.thisForm button{
+  padding: 10px 50px;
+  border-radius: 10px;
+  background-color: #f05858;
+    box-shadow: 0px 2px 4px 0px ;
     border: none;
-    padding: 10px 30px;
     color: #fff;
-    background-color: blue;
-    border-radius: 10px;
-    font-weight: 700;
-    cursor: pointer;
-    margin: 0 3px;
 }
 
-.count h3{
-    text-align: center;
-    margin-bottom: 10px;
+.thisForm .typing{
+  position: absolute;
+  right: 10px;
+  left: 20px;
+  margin: 10px 0;
+}
+
+.Card{
+  display: flex;
+  justify-content: space-between;
+  margin: 70px auto;
+  width: 60%;
+  background-color: #f05858;
+    box-shadow: 0px 2px 4px 0px ;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.Card h3{
+  font-size:20px;
+  width: 700px;
+}
+
+.count{
+  text-align: center;
 }
 
 .count h2{
-    text-align: center;
-    color: red;
-    font-size: 50px;
+  font-size: 50px;
 }
-
 .strikethrough{
-    text-decoration: line-through;
+  text-decoration: line-through;
+  color: black;
+}
+
+.style{
+      background-color:#1772a7;
+      padding:10px 30px;
+      cursor:pointer;
+      border-radius:10px;
+      border:none;
+      margin-right:10px;
+      color: #fff;
+      font-weight: 700;
 }
 
 
-@media screen and (max-width:500px) {
-    .thisForm input{
-        width:400px;
-    }
+@media screen and (max-width:500px){
 
-    .Card{
-        justify-content: space-between;
-        padding: 20px;
-        font-size: 12px;
-    }
+  .thisForm{
+    margin: 10px 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
-    .card button{
-        margin: 0 10px;
-    }
+  .thisForm input{
+    width: 450px;
+    margin-left: 10px;
+    /* margin-right: 20px; */
+  }
+
+  .thisForm button{
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 450px;
+    
+  }
+
+  .thisForm .typing{
+    top: 30px;
+    left: 50px;
+    
+  }
+
+  .Card{
+    flex-direction: column;
+    width: 450px;
+    margin-left: 20px;
+  }
+
+  .Card h3{
+    font-size: 20px;
+  }
+
+  .style{
+    margin: 10px 0;
+  }
+
+  .count{
+    text-align: center;
+    margin-left: 10px;
+  }
+
 }
 
-@media screen and (min-width:501px) and (max-width:768px){
-    .thisForm input{
-        width:500px;
-    }
+@media screen and (min-width:501px) and (max-width:768px) {
+  .thisForm{
+    margin: 0px;
+    width: 80%;
+  }
 
-    .Card{
-        justify-content: space-between;
-        padding: 20px;
-        font-size: 12px;
-    }
+  .thisForm input{
+    width: 600px;
+    margin-left: 10px;
+    /* margin-right: 20px; */
+  }
 
-    .card button{
-        margin: 0 10px;
-    }
-}
+  .thisForm button{
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 600px;
+    
+  }
 
-@media screen and (min-width:768px) and (max-width:1024px){
+  .thisForm .typing{
+    top: 30px;
+    left: 50px;
+    
+  }
 
-    .Card{
-        justify-content: space-between;
-        padding: 20px;
-        font-size: 12px;
-    }
+  .Card{
+    flex-direction: column;
+    width: 600px;
+    margin-left: 10px;
+  }
 
-    .card button{
-        margin: 0 10px;
-    }
+  .Card h3{
+    font-size: 20px;
+  }
+
+  .style{
+    margin: 10px 0;
+  }
 }
