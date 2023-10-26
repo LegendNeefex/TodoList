@@ -5,7 +5,8 @@ import TodoContext from "./TodoContext"
 
 function Todos({data}) {
   const [isStrikethrough,setStrikethrough] = useState(false)
-  const {deleteHandler} = useContext(TodoContext)
+  const {deleteHandler,setEditID, setEditMode, setText,setSend} = useContext(TodoContext)
+
 
   const strikeThroughHandler = ()=>{
     // setStrikethrough(true)
@@ -17,6 +18,14 @@ function Todos({data}) {
     }
   }
 
+  const editHandler = ()=>{
+
+
+    setEditMode(true)
+    setEditID(data.id)
+    setText(data.text)
+    setSend("Update")
+ }
 
     return (
       <Card>
@@ -24,6 +33,7 @@ function Todos({data}) {
         <h3 className= {isStrikethrough === true ? 'strikethrough' : null}>{data.text}</h3>
         <button className="style" onClick={strikeThroughHandler}>Done</button>
         <button className="style" onClick={()=> deleteHandler(data.id)}>Delete</button>
+        <button className="style" onClick={editHandler}>Edit</button>
       </Card>
     )
 }

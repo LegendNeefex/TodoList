@@ -9,7 +9,7 @@ function TodoArrange() {
     return (
       <>
         {data.map((item)=>(
-            <Todos data={item} key={item.id} deleteHandler = {deleteHandler} />
+          <Todos data={item} key={item.id} deleteHandler = {deleteHandler} />
         ))}
       </>
     )
